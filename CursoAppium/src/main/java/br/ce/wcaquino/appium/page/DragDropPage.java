@@ -1,15 +1,17 @@
 package br.ce.wcaquino.appium.page;
 
 import static br.ce.wcaquino.appium.core.DriverFactory.getDriver;
+import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
 
 import java.util.List;
 
 import org.openqa.selenium.By;
 
 import br.ce.wcaquino.appium.core.BasePage;
-import br.ce.wcaquino.appium.core.DriverFactory;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
+import io.appium.java_client.touch.offset.ElementOption;
+import io.appium.java_client.touch.offset.PointOption;
 
 public class DragDropPage extends BasePage {
 	
@@ -18,9 +20,9 @@ public class DragDropPage extends BasePage {
 		MobileElement inicio = getDriver().findElement(By.xpath("//*[@text='"+origem+"']"));
 		MobileElement fim = getDriver().findElement(By.xpath("//*[@text='"+destino+"']"));
 		
-		new TouchAction(getDriver())
-		.longPress(inicio)
-		.moveTo(fim)
+		new TouchAction<>(getDriver())
+		.longPress(longPressOptions().withElement(ElementOption.element(inicio)))
+		.moveTo(PointOption.point(fim.getCenter()))
 		.release()
 		.perform();	
 	}
