@@ -19,6 +19,7 @@ public class CalculadoraTeste {
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 		desiredCapabilities.setCapability("platformName", "Android");
 		desiredCapabilities.setCapability("deviceName", "emulator-5554");
+		desiredCapabilities.setCapability("automationName", "uiautomator2");
 		desiredCapabilities.setCapability("appPackage", "com.android.calculator2");
 		desiredCapabilities.setCapability("appActivity", "com.android.calculator2.Calculator");
 		

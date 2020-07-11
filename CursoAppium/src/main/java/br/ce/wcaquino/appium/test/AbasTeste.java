@@ -12,6 +12,7 @@ public class AbasTeste extends BaseTest {
 	private MenuPage menu = new MenuPage();
 	private AbasPage page = new AbasPage();
 
+	@SuppressWarnings("deprecation")
 	@Test
 	public void deveInteragirComAbas() {
 

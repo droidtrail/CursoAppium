@@ -48,16 +48,16 @@ public class BasePage {
 		getDriver().findElement(By.xpath("//*[@text='" + texto + "']")).click();
 		
 		WebElement e = getDriver().findElement(By.xpath("//*[@text='" + texto + "']"));
-				TouchAction action = new TouchAction<>(DriverFactory.getDriver());
-				action
-				  //.press(e)
-				  .press(PointOption.point(new Point(e)))
-				  .waitAction(Duration.ofMillis(50))
-				  .release()
-				  .press(e)
-				  .waitAction(Duration.ofMillis(50))
-				  .release()
-				  .perform();
+//				TouchAction action = new TouchAction<>(DriverFactory.getDriver());
+//				action
+//				  //.press(e)
+//				  .press(PointOption.point(new Point(e)))
+//				  .waitAction(Duration.ofMillis(50))
+//				  .release()
+//				  .press(e)
+//				  .waitAction(Duration.ofMillis(50))
+//				  .release()
+//				  .perform();
 	}
 
 	public void selecionarCombo(By by, String valor) {
