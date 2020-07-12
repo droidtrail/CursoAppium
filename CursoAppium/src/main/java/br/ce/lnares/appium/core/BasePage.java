@@ -148,7 +148,7 @@ public class BasePage {
 	
 	public void swipeEsquerda() {
 		
-		swipe(0.1, 0.9);
+		swipe(0.2, 0.9);
 		
 	}
 	public void swipeElementos(MobileElement element, double inicio, double fim) {
