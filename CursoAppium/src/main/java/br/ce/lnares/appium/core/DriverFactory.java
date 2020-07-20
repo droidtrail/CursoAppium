@@ -66,6 +66,10 @@ public class DriverFactory {
 //		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 //
 //	}
+	
+	public static void pausar() throws InterruptedException {
+		driver.wait(1000);
+	}
 
 	public static void KillDriver() {
 		if (driver != null) {
